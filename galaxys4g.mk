@@ -33,8 +33,8 @@ PRODUCT_COPY_FILES += \
     device/samsung/galaxys4g/initramfs/init.rc:root/init.rc \
     device/samsung/galaxys4g/initramfs/init.herring.rc:root/init.herring.rc \
     device/samsung/galaxys4g/initramfs/lpm.rc:root/lpm.rc \
-    device/samsung/galaxys4g/ueventd.herring.rc:root/ueventd.herring.rc \
-    device/samsung/galaxys4g/setupenv.sh:recovery/root/sbin/setupenv.sh
+    device/samsung/galaxys4g/initramfs/ueventd.herring.rc:root/ueventd.herring.rc \
+    device/samsung/galaxys4g/initramfs/ueventd.rc:root/ueventd.rc
 
 
 # WiFi
@@ -43,7 +43,6 @@ PRODUCT_COPY_FILES += \
 
 # Keylayout and Keychars
 PRODUCT_COPY_FILES += \
-    device/samsung/galaxys4g/cypress-touchkey.kl:system/usr/keylayout/cypress-touchkey.kl \
     device/samsung/galaxys4g/prebuilt/usr/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
     device/samsung/galaxys4g/prebuilt/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/samsung/galaxys4g/prebuilt/usr/keylayout/aries-keypad.kl:system/usr/keylayout/aries-keypad.kl \
@@ -53,13 +52,16 @@ PRODUCT_COPY_FILES += \
     device/samsung/galaxys4g/prebuilt/usr/keychars/Broadcom_Bluetooth_HID.kcm.bin:system/usr/keychars/Broadcom_Bluetooth_HID.kcm.bin \
     device/samsung/galaxys4g/prebuilt/usr/keychars/melfas_touchkey.kcm.bin:system/usr/keychars/melfas_touchkey.kcm.bin \
     device/samsung/galaxys4g/prebuilt/usr/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
-    device/samsung/galaxys4g/prebuilt/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl \
     device/samsung/galaxys4g/prebuilt/usr/keychars/aries-keypad.kcm.bin:system/usr/keychars/aries-keypad.kcm.bin \
     device/samsung/galaxys4g/prebuilt/usr/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin
 
+
+#    device/samsung/galaxys4g/prebuilt/usr/keylayout/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl \
+#    device/samsung/galaxys4g/prebuilt/usr/keylayout/cypress-touchkey.kl:system/usr/keylayout/cypress-touchkey.kl \
+
 # extra stuff
-PRODUCT_COPY_FILES += \
-    device/samsung/galaxys4g/prebuilt/xbin/bmlwrite:system/xbin/bmlwrite
+#PRODUCT_COPY_FILES += \
+#    device/samsung/galaxys4g/prebuilt/xbin/bmlwrite:system/xbin/bmlwrite
 
 # Generated kcm keymaps
 PRODUCT_PACKAGES := \
@@ -68,7 +70,7 @@ PRODUCT_PACKAGES := \
 
 # These are the OpenMAX IL configuration files
 PRODUCT_COPY_FILES += \
-    device/samsung/galaxys4g/sec_mm/sec_omx/sec_omx_core/secomxregistry:system/etc/secomxregistry \
+    device/samsung/galaxys4g/prebuilt/sec_mm/sec_omx/sec_omx_core/secomxregistry:system/etc/secomxregistry \
     device/samsung/galaxys4g/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
 
 # These are the OpenMAX IL modules
