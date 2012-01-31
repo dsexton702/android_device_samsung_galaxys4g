@@ -139,7 +139,7 @@ media/battery_charging_90.qmg
 media/battery_charging_95.qmg
 media/battery_charging_100.qmg
 media/chargingwarning.qmg
-media/disconnected.qmg
+media/Disconnected.qmg
 "
 
 for FILE in $FILES; do
@@ -298,7 +298,7 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/media/battery_charging_95.qmg:system/media/battery_charging_95.qmg \\
     vendor/samsung/__DEVICE__/proprietary/media/battery_charging_100.qmg:system/media/battery_charging_100.qmg \\
     vendor/samsung/__DEVICE__/proprietary/media/chargingwarning.qmg:system/media/chargingwarning.qmg \\
-    vendor/samsung/__DEVICE__/proprietary/media/disconnected.qmg:system/media/disconnected.qmg
+    vendor/samsung/__DEVICE__/proprietary/media/Disconnected.qmg:system/media/Disconnected.qmg
 
 EOF
 
