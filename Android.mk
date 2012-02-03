@@ -14,5 +14,27 @@
 
 LOCAL_PATH := $(call my-dir)
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+ifeq ($(TARGET_DEVICE),galaxys4g)
 
+#include $(CLEAR_VARS)
+#LOCAL_SRC_FILES := s3c-keypad.kcm
+#LOCAL_MODULE_TAGS := optional
+#include $(BUILD_KEY_CHAR_MAP)
+
+#include $(CLEAR_VARS)
+#LOCAL_SRC_FILES := cypress-touchkey.kcm
+#LOCAL_MODULE_TAGS := optional
+#include $(BUILD_KEY_CHAR_MAP)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := setup_fs.c
+LOCAL_MODULE := setup_fs
+LOCAL_MODULE_TAGS := optional
+#LOCAL_SHARED_LIBRARIES += libext4_utils libz
+include $(BUILD_EXECUTABLE)
+
+ifneq ($(TARGET_SIMULATOR),true)
+include $(call all-makefiles-under,$(LOCAL_PATH))
+endif
+
+endif
