@@ -60,13 +60,18 @@ PRODUCT_COPY_FILES += \
 #    device/samsung/galaxys4g/prebuilt/usr/keylayout/cypress-touchkey.kl:system/usr/keylayout/cypress-touchkey.kl \
 
 # extra stuff
-#PRODUCT_COPY_FILES += \
-#    device/samsung/galaxys4g/prebuilt/xbin/bmlwrite:system/xbin/bmlwrite
+PRODUCT_COPY_FILES += \
+    device/samsung/galaxys4g/prebuilt/xbin/bmlwrite:system/xbin/bmlwrite
 
 # Generated kcm keymaps
 PRODUCT_PACKAGES := \
     cypress-touchkey.kcm \
     s3c-keypad.kcm
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+    make_ext4fs \
+    setup_fs
 
 # These are the OpenMAX IL configuration files
 PRODUCT_COPY_FILES += \

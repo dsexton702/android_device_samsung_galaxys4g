@@ -79,6 +79,8 @@ lib/lib_tvoutengine.so
 lib/libtvoutfimc.so
 lib/libtvouthdmi.so
 lib/libtvoutservice.so
+bin/RescueStarter
+bin/immvibed
 
 bin/pppd
 bin/rild
@@ -89,6 +91,7 @@ lib/libsecril-client.so
 etc/gps.conf
 vendor/bin/gpsd
 lib/hw/gps.s5pc110.so
+bin/agpsd
 
 bin/pvrsrvinit
 lib/egl/libEGL_POWERVR_SGX540_120.so
@@ -184,7 +187,9 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_aps.bin:system/etc/wifi/bcm4329_aps.bin \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_mfg.bin:system/etc/wifi/bcm4329_mfg.bin \\
-    vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_sta.bin:system/etc/wifi/bcm4329_sta.bin
+    vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_sta.bin:system/etc/wifi/bcm4329_sta.bin \\
+    vendor/samsung/__DEVICE__/proprietary/bin/RescueStarter:system/bin/RescueStarter \\
+    vendor/samsung/__DEVICE__/proprietary/bin/immvibed:system/bin/immvibed
 
 #
 # Display (3D)
@@ -268,7 +273,8 @@ PRODUCT_COPY_FILES += \\
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/vendor/bin/gpsd:system/vendor/bin/gpsd \\
     vendor/samsung/__DEVICE__/proprietary/etc/gps.conf:system/etc/gps.conf \\
-    vendor/samsung/__DEVICE__/proprietary/lib/hw/gps.s5pc110.so:system/lib/hw/gps.s5pc110.so
+    vendor/samsung/__DEVICE__/proprietary/lib/hw/gps.s5pc110.so:system/lib/hw/gps.s5pc110.so \\
+    vendor/samsung/__DEVICE__/proprietary/bin/agpsd:system/bin/agpsd
 
 #
 # Files for battery charging screen
