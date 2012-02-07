@@ -31,11 +31,8 @@ PRODUCT_COPY_FILES := \
 # Init files
 PRODUCT_COPY_FILES += \
     device/samsung/galaxys4g/initramfs/init.rc:root/init.rc \
-    device/samsung/galaxys4g/initramfs/init.herring.rc:root/init.herring.rc \
     device/samsung/galaxys4g/initramfs/lpm.rc:root/lpm.rc \
-    device/samsung/galaxys4g/initramfs/ueventd.herring.rc:root/ueventd.herring.rc \
     device/samsung/galaxys4g/initramfs/ueventd.rc:root/ueventd.rc
-
 
 # WiFi
 PRODUCT_COPY_FILES += \
